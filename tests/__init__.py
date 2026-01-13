@@ -1,0 +1,1 @@
+# NoteWhisper package init

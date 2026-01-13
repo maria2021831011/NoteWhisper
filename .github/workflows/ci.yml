@@ -21,21 +21,27 @@ jobs:
         python-version: ["3.10", "3.11"]
 
     steps:
+      # 1️⃣ Checkout the repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
+      # 3️⃣ Upgrade pip
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
 
+      # 4️⃣ Install dev dependencies (runtime + dev only, ML skipped)
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install tox tox-gh-actions
-          pip install -e .[dev]  # only dev dependencies, ML skip
+          pip install -e ".[dev]"
 
+      # 5️⃣ Run tests & lint via tox
       - name: Run tox
         run: tox

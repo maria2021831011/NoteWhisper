@@ -1,10 +1,5 @@
 class KeypointExtractor:
-    """
-    Extracts key points from lecture text.
-    """
-    def __init__(self, text: str):
-        self.text = text
-
-    def extract(self) -> list[str]:
-        # placeholder logic
-        return self.text.split(".")  # simple split as example
+    def extract(self, text: str) -> list[str]:
+        """Dummy keypoint extraction"""
+        lines = [line.strip() for line in text.split(".") if line.strip()]
+        return lines[:5]  # return first 5 sentences as keypoints

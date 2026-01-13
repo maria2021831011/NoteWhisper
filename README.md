@@ -22,3 +22,20 @@
 conda create -n notewhisper python=3.10 -y
 conda activate notewhisper
 ```
+
+2.Install NoteWhisper from PyPI:
+
+
+```bash
+pip install NoteWhisper
+
+
+```
+
+3.Install development dependencies (optional for dev/testing):
+
+
+```bash
+pip install -r requirements_dev.txt
+
+```

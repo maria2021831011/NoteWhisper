@@ -1,0 +1,9 @@
+black>=24.3.0          # code formatter
+isort>=6.0.0           # import sorting
+flake8>=6.1.0          # code linting
+pytest>=8.3.2          # unit testing
+pytest-cov>=4.1.0      # test coverage
+mypy>=1.5.1            # type checking
+pre-commit>=3.4.0      # git hooks
+tox>=3.25.1                 # Multi-python testing
+mkdocs-material             # Documentation build locally
